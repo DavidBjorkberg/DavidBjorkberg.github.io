@@ -926,7 +926,12 @@ input, select, textarea {
 				ul.icons li a:active {
 					background-color: rgba(255, 255, 255, 0.175);
 				}
-
+				video
+				{
+					width: 100%;
+					height: auto;
+					max-height: 100%;
+				}
 /* Table */
 
 	.table-wrapper {
