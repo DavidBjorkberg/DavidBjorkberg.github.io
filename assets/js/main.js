@@ -14,7 +14,10 @@ function CloseSlideshow()
 	isSlideShowOpen = 0;
 }
 (function($) {
-
+	document.getElementsByTagName('video')[0].onended = function () {
+		this.load();
+		this.play();
+	  };
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
