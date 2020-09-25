@@ -109,7 +109,7 @@
 								<li>DirectX</li>
 								<li>C++</li>
 								<li>HLSL</li>
-							</ul><label for=></label>
+							</ul>
 							</p>
 								Graphics renderer built from the ground up in DirectX and hlsl.
 								<br>
@@ -140,7 +140,7 @@
 								<li>Built in unity</li>
 								<li>C#</li>
 								<li>Worked with game designer</li>
-							</ul><label for=></label>
+							</ul>
 							</p>
 							Worked at small game studio to develop prototypes. 
 							<br>
@@ -159,26 +159,15 @@
 							<ul>
 								<li>Built in unity</li>
 								<li>C#</li>
-								<li>Custom mesh</li>
-							</ul><label for=></label>
+								<li>Network</li>
+							</ul>
 							</p>
-								A First-person-shooter game built in Unity.
-								<br>
-								When the right mouse button is held down, three things happen:
-								<ul>
-									<li>Players bullets bounce off the first wall they hit </li>
-									<li>A custom mesh ray is shot from the players gun, to help aim the bounce direction</li>
-									<li>A camera is spawned at an area close to the bounce position, which can see the the ray from the bounce position to the rays end position.</li>
-								</ul>
-								This mechanic can be seen in the GIF above.
-								<br>
-								Textures were retrieved from the Unity Asset Store.
-								<br>
-								<b>Environment: </b>https://assetstore.unity.com/packages/3d/environments/3d-free-modular-kit-85732
-								<br> 
-								<b>Crosshair: </b>https://assetstore.unity.com/packages/2d/gui/icons/crosshairs-plus-139902
- 
+								This is an online FPS built in unity where one player acts as the host and the rest as clients.
+								This project was built on Unitys now deprecated UNet.
 							</p>
+							<ul class="actions">
+								<li><a href="#OnlineFPSCode" class="button primary">View code</a></li>
+							</ul>
 							<video autoplay loop controls playsinline>
 								<source src = "images/UnityFPSFrontPage.mp4">
 							</video>
@@ -187,7 +176,8 @@
 								<li>Built in unity</li>
 								<li>C#</li>
 								<li>Custom mesh</li>
-							</ul><label for=></label>
+								<li>State-based AI system</li>
+							</ul>
 							</p>
 								A First-person-shooter game built in Unity.
 								<br>
@@ -204,8 +194,10 @@
 								<b>Environment: </b>https://assetstore.unity.com/packages/3d/environments/3d-free-modular-kit-85732
 								<br> 
 								<b>Crosshair: </b>https://assetstore.unity.com/packages/2d/gui/icons/crosshairs-plus-139902
- 
 							</p>
+							<ul class="actions">
+								<li><a href="#UnityFPSGifs" class="button primary">View gifs</a></li>
+							</ul>
 							</article>
 
 						<!-- About -->
@@ -391,8 +383,8 @@
 							<article id="ThingyGifs">
 								<h2 class="major">Level editor code</h2>
 								<p>
-									<a class="image main"><img src="images/Thingy/Gifs/ButtonDoorBoostAppearing.gif" alt="" /></a>
 									<h3>Button / Remote door / boostpad / appearing platform / door</h3>
+									<a class="image main"><img src="images/Thingy/Gifs/ButtonDoorBoostAppearing.gif" alt="" /></a>
 									<ul class="actions">
 										<li><a href="#ThingyCode1" class="button primary">View code</a></li>
 									</ul>
@@ -536,27 +528,91 @@
 							<article id="RendererGifs">
 								<h2 class="major">DirectX Renderer gifs</h2>
 								<p>
+									<H3>Specular mapping / Distortion mapping / Normal mapping</H3>
 									<video autoplay loop controls playsinline>
 									<source src = "images/SpecularDistortNormalMap.mp4">
 									</video>
-									<H3>Specular mapping / Distortion mapping / Normal mapping</H3>
+									<h3>Water animation through UV-manipulation</h3>
 									<video autoplay loop controls playsinline>
 										<source src = "images/WaterAnimation.mp4">
 									</video>
-									<h3>Water animation through UV-manipulation</h3>
+									<h3>mirror</h3>
 									<video autoplay loop controls playsinline>
 										<source src = "images/Mirror.mp4">
 									</video>
-									<h3>mirror</h3>
+									<h3>Height mapping</h3>
 									<video autoplay loop controls playsinline>
 										<source src = "images/HeightMap.mp4">
 									</video>
-									<h3>Height mapping</h3>
+									<h3>Game loop</h3>
 									<video autoplay loop controls playsinline>
 										<source src = "images/GameLoop.mp4">
 									</video>
-									<h3>Game loop</h3>
 
+								</p>
+							</article>
+							<article id="OnlineFPSCode">
+								<h2 class="major">Online FPS Code</h2>
+								<p>
+									<video autoplay loop controls playsinline>
+									<source src = "images/SpecularDistortNormalMap.mp4">
+									</video>
+									<H3>TODO:</H3>
+								</p>
+							</article>
+							<article id="UnityFPSGifs">
+								<h2 class="major">Unity FPS Code</h2>
+								<p>
+									<H3>Custom mesh / Dynamic camera position</H3>
+									<video autoplay loop controls playsinline>
+									<source src = "images/UnityFPSFrontPage.mp4">
+									</video>
+									<ul class="actions">
+										<li><a href="#CustomMeshCode" class="button primary">View code</a></li>
+									</ul>
+									<H3>Death animation</H3>
+									<video autoplay loop controls playsinline>
+									<source src = "images/DeathAnimation.mp4">
+									</video>
+									<ul class="actions">
+										<li><a href="#DeathAnimationCode" class="button primary">View code</a></li>
+									</ul>
+									<H3>Detected player animation</H3>
+									<video autoplay loop controls playsinline>
+									<source src = "images/DetectedPlayer.mp4">
+									</video>
+									<ul class="actions">
+										<li><a href="#DetectedPlayerCode" class="button primary">View code</a></li>
+									</ul>
+								</p>
+							</article>
+							<article id="DetectedPlayerCode">
+								<h2 class="major">Code</h2>
+								<p>
+									<h3>Rotate towards player</h3>
+									<a class="image main"><img src="images/RotateTowards.PNG" alt="" /></a>
+									<h3>Hold line of sight check</h3>
+									<a class="image main"><img src="images/CheckHeldLos.PNG" alt="" /></a>
+								</p>
+							</article>
+							<article id="DeathAnimationCode">
+								<h2 class="major">Code</h2>
+								<p>
+									<h3>Death animation</h3>
+									<a class="image main"><img src="images/DeathAnimation.PNG" alt="" /></a>
+								</p>
+							</article>
+							<article id="CustomMeshCode">
+								<h2 class="major">Code</h2>
+								<p>
+									<h3>Bounce calculation</h3>
+									<a class="image main"><img src="images/RayCode.PNG" alt="" /></a>
+									<a class="image main"><img src="images/RayCode2.PNG" alt="" /></a>
+									<h3>Custom mesh</h3>
+									<a class="image main"><img src="images/DrawMesh.PNG" alt="" /></a>
+									<a class="image main"><img src="images/DrawMesh2.PNG" alt="" /></a>
+									<h3>Dynamic camera position</h3>
+									<a class="image main"><img src="images/BounceCamera.PNG" alt="" /></a>
 								</p>
 							</article>
 					</div>
