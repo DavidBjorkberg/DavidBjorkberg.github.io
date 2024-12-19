@@ -1655,7 +1655,7 @@ input, select, textarea {
 
 			.image.centered img {
 				margin: 0 auto;
-				width: 75%;
+				width: auto;
 			}
 
 /* Button */
