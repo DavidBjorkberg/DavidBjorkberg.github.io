@@ -1573,6 +1573,10 @@ input, select, textarea {
 		border: 0;
 	}
 
+	.PortfolioProject {
+		text-align: left;
+		margin-left: 20px;
+		}
 /* Tables */
 
 	table {
