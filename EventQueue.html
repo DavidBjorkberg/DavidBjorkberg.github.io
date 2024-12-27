@@ -19,23 +19,17 @@
 	Enabling latent and dynamic gameplay in an easy and clear way without relying on callbacks.</h2> 
 </header>
 <p class="PortfolioProject">
-In developing a turn-based game, I created a system to make gameplay more dynamic and manageable <br>
-<br>
-Initially, I used <b>callbacks and delegates</b> for injecting item-specific logic into the gameplay.
-for example if the player had a lifesteal item, i wanted the player to gain health and play a heal animation after dealing damage before continuing with the turn.This approach, however, led to complicated, hard-to-maintain code <br>
-<br>
-To solve this i created a <b>plugin</b>, where you can encapsulate a piece of gameplay logic in an <b>"Event"</b>.<br>
-For example: to create an <b>Attack event</b>, you would simply create an class inheriting from the <b>Event</b> class, place your attack logic inside it and add the event to the <b>Event Queue</b>.<br>
-When the queue reaches the <b>Attack event</b>, it executes its logic and then moves to the next Event in the queue.<br>
-<br>
-<b>All you'd have to do to implement a lifesteal item now is to:</b><br>
-1. <b>Subscribe</b> to the delegate that notifies when a new event triggers.<br>
-2. When the delegate triggers, <b>insert a heal event</b> as the next Event in the queue. <br>
-<br>
-Additionally, you can prevent the queue from proceeding to the next Event by adding a <b>"Blocker."</b> As long as an event has at least one blocker, the queue won't move on to the subsequent event.<br>
-With these components you can easily create dynamic & latent gameplay that scales well with the project.
-</p> 
-</div>
+	When developing a turn-based game, I initially used <b>callbacks and delegates</b> to insert item-specific logic into the gameplay. This approach led to complex, hard-to-maintain code. <br>
+	To address this, I created a <b>plugin</b> where gameplay logic is encapsulated in <b>"Events."</b><br>	
+	<br>
+	For example, to handle an attack, you create an <b>Attack Event</b> class, place the logic inside it, and add it to the <b>Event Queue</b>. When this Event triggers, its logic executes before moving to the next event in the queue.<br>
+	All you'd have to do to implement a lifesteal item now is to:<br>
+	1. Subscribe to the delegate that notifies when a new event triggers.<br>
+	2. When the delegate triggers, insert a heal event as the next Event in the queue.<br>
+	<br>
+	Additionally, the system allows adding <b>"Blockers"</b> to prevent the queue from proceeding until certain conditions are met. <br>
+	
+	With these components you can easily create dynamic & latent gameplay that scales well with the project.
 </div>
 <a href="https://www.fab.com/listings/4c254262-6a72-40cc-882c-989d3065f5c1" download class="button alt">View on FAB</a>
 <a href="https://docs.google.com/document/d/1F2_bfzeF6Jfh_IybzFyZIWR6lP9H3zvPSfxPxRlHHa4/edit?tab=t.0#heading=h.y75lcz1we2v1" download class="button alt">View Documentation</a>
