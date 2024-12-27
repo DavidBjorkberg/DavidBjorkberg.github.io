@@ -7,19 +7,29 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="is-preload">   
-<article id="Portfolio" class="wrapper style1">
+<article id="Portfolio" class="wrapper style3">
 <div class="container">
-	<span class="image centered"><img src="images/FrameByFrameDebuggerT.jpg" alt="" /></span>
+	<span class="image centered"><img src="images/FBFVideo.gif" alt="" /></span>
 </div> 
 <div class="container"> 
 <div class="col-8 col-7-large col-12-medium">
 <header style="text-align: center;">
 <h1>Frame By Frame Debugger</h1>
-<h2>Open world multiplayer game</h2> 
+<h2>Unreal Engine plugin that lets you record frames during gameplay and replay them for easy and visual debugging</h2> 
 </header>
 <p class="PortfolioProject">
-At Spellscaper...
+	I initially created this plugin to support the development of my RTS Movement plugin <b href="RTS.html">[Link]</b>. I felt that the usual methods of debugging were not sufficient because I needed to see how forces interacted with each other and were modified both between frames and within a frame.<br>
+	This plugin lets you record frames into a .json file, storing only the changes from the previous frame.<br>
+	The .json file contains any data that the user has decided to store each frame.<br>
+	A navmesh of the current map is also stored into an .obj file which the plugin then spawns when debugging.<br>
+	<b>When watching the replay you can:</b> <br>
+	- See the values of each variable <br>
+	- Step through arrays <br>
+	- Select an actor to see their stored variables<br>
+	- Visualize vectors/shapes by checking the draw checkbox<br>
+	<br>However, after finishing the plugin, I realized that Unreal already provides similar functionality in its "Visual logger", so this plugin was not released on FAB.
 </p> 
+<a href="https://docs.google.com/document/d/1t7ddiL44XuKP1S8cXZocsljBrEMV6ozjovqNnvgI8_o/edit?tab=t.0#heading=h.wfrcb2rc8z55" download class="button alt">View Documentation</a>
 </div>
 </div>
 </article> 

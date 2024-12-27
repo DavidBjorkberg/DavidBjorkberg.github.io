@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>David Björkberg Portfolio</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">   
+<article id="Portfolio" class="wrapper style3">
+<div class="container">
+	<span class="image centered"><img src="images/RTS2.gif" alt="" /></span>
+</div> 
+<div class="container"> 
+<div class="col-8 col-7-large col-12-medium">
+<header style="text-align: center;">
+<h1>RTS Movement</h1>
+<h2>(Work In Progress)</h2> 
+</header>
+<p class="PortfolioProject">
+
+This is a boids based avoidance system with alterations to minimize overlap between pawns and to stop movement outside of the navmesh.<br>
+The pawn gets an initial direction towards its destination and when it gets within a certain range of another pawn, it checks that pawns position & direction and modifies its own direction to avoid it.<br><br>
+To make sure it doesn't leave the navmesh it queries the navmesh for its current polygon and the polygon it would be next frame with its current direction, if it is not allowed to move to that polygon, it counts it as terrain and adjusts its direction accordingly.<br><br>
+The performance is currently too poor to release it to FAB.<br>
+<b>To fix this I am doing three things:</b><br>
+1. Creating an Actor partition, to make sure the pawns only queries pawns that are reasonably close. Reducing CPU cost but increasing memory usage.<br>
+2. The cost of computing the new direction when colliding with a pawn can get quite high (especially when its more than one collision), but since its all vector math, I can move this to the GPU which can compute it much faster. <br>
+3. Implementing options for the user to have much cheaper but less precise movement.<br>
+<br>
+
+Unreal Engine provides its own avoidance behaviour, however this is too floaty and imprecise to be used in a game where the pawn movement matters heavily. It is more suitable for crowd behaviour that is not central to the gameplay.
+</p> 
+</div>
+</div>
+</article> 
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
