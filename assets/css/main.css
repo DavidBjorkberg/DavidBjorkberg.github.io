@@ -285,7 +285,7 @@ input, select, textarea {
 			position: relative;
 			padding-bottom: 56.25%; /* 16:9 aspect ratio */
 			height: 0;
-			overflow: hidden;
+			overflow: auto;
 			max-width: 100%;
 			background: #000; /* Optional: sets a background color */
 		}
