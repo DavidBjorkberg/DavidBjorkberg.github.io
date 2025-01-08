@@ -298,14 +298,12 @@ input, select, textarea {
 			height: 100%;
 		}
 		.gif-wrapper {
-			position: relative;
 			width: 100%;
-			max-width: 100%;
 			overflow: hidden;
 		}
 		
 		.gif-wrapper img {
-			width: 100%;
+			max-width: 100%;
 			height: auto;
 			display: block;
 		}
