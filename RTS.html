@@ -17,8 +17,7 @@
 <div class="container"> 
 <div class="col-8 col-7-large col-12-medium">
 <header style="text-align: center;">
-<h1>RTS Movement</h1>
-<h2>(Work In Progress)</h2> 
+<h1>Pawn Avoidance Behaviour</h1>
 </header>
 <p class="PortfolioProject">
 
@@ -37,21 +36,7 @@ This is a boids based avoidance system with alterations to make the movement mor
 - To ensure it doesn't leave the navmesh, the pawn queries the navmesh for its current polygon and its polygon next frame if it continues the current direction.<br>
 - If it is not allowed to move to that polygon, it counts it as terrain and adjusts its direction accordingly.<br>
 </p> 
-<header style="text-align: left;">
-<h3>Performance Optimization</h3>
-</header>
 <p class="PortfolioProject">
-The performance is currently too poor to release it to FAB.<br>
-<b>To fix this I am doing three things:</b><br>
-1. <b> Actor Partitioning</b><br>
-	- Create an Actor partition to ensure pawns only query those reasonably close.<br>
-	- This reduces CPU cost while slightly increasing memory usage.<br>
-2. <b>GPU Offloading</b><br>
-	- The computation cost of determining a new direction during pawn collisions can be high, especially with multiple collisions.<br>
-	- Since this is primarily vector math, it can be moved to the GPU to be computed faster.<br>
-3. <b> User Options for Movement Precision</b><br>
-	- Implement options for the user to choose cheaper, less precise movement.<br>
-<br>
 Unreal Engine provides its own avoidance behaviour, however this is too floaty and imprecise to be used in a game where the pawn movement matters heavily. It is more suitable for crowd behaviour that is not central to the gameplay.
 </p>
 </div>
