@@ -20,10 +20,10 @@
 </header>
 <p class="PortfolioProject">
 
-	This system is based on classic boids avoidance but modified to: <br>
-	Make movement more deterministic<br>
-	Minimize overlap between pawns<br>
-	Prevent pawns from moving outside the navmesh</p>
+	<b>This system is based on classic boids avoidance but modified to: </b><<br>
+	1. Make movement more deterministic<br>
+	2. Minimize overlap between pawns<br>
+	3. Prevent pawns from moving outside the navmesh</p>
 <header style="text-align: left;">
 <h3>General Overview:</h3>
 </header>
@@ -36,10 +36,11 @@
 <b>3. Navmesh Boundary Checking</b><br>
 - To ensure it doesn't leave the navmesh, the pawn queries the navmesh for its current polygon and its polygon next frame if it continues the current direction.<br>
 - If it is not allowed to move to that polygon, it counts it as terrain and adjusts its direction accordingly.<br>
-	<b>Challenge: Balancing Avoidance with Smooth Navigation<b>
-	One of the key challenges in this system was modifying each pawn’s direction to avoid collisions and navmesh boundaries while still guaranteeing they reach their destination smoothly.
-		The system needed to handle many edge cases. Such as tight spaces, multiple pawns converging, and complex navmesh layouts, without causing jittery or unnatural movement.
-		To solve this, the system carefully adjusts avoidance on a frame-by-frame basis, ensuring pawns react smoothly to each other’s movements without avoiding into one another or causing future conflicts.</p> 
+	<br>
+	<b>Challenge: Balancing Avoidance with Smooth Navigation</b><br>
+	One of the key challenges in this system was modifying each pawn’s direction to avoid collisions and navmesh boundaries while still guaranteeing they reach their destination smoothly.<br>
+		The system needed to handle many edge cases. Such as tight spaces, multiple pawns converging, and complex navmesh layouts, without causing jittery or unnatural movement.<br>
+		To solve this, the system carefully adjusts avoidance on a frame-by-frame basis, ensuring pawns react smoothly to each other’s movements without avoiding into one another or causing future conflicts.</p> <br><br>
 <p class="PortfolioProject">
 Unreal Engine provides its own avoidance behaviour, however this is too floaty and imprecise to be used in a game where the pawn movement matters heavily. It is more suitable for crowd behaviour that is not central to the gameplay.
 </p>
